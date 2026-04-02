@@ -1,0 +1,19 @@
+{
+  "name": "reflex",
+  "version": "0.1.0",
+  "description": "Skills for the Reflex web framework: components, state management, events, styling, database, and full-stack Python web apps",
+  "author": {
+    "name": "Reflex",
+    "url": "https://reflex.dev"
+  },
+  "keywords": [
+    "reflex",
+    "python",
+    "web",
+    "full-stack",
+    "components",
+    "state",
+    "react",
+    "tailwind"
+  ]
+}
