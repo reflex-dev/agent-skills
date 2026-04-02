@@ -1,8 +1,0 @@
-{
-  "name": "reflex",
-  "description": "Skills for the Reflex web framework — build full-stack Python web apps with no JavaScript required.",
-  "version": "0.1.0",
-  "author": {
-    "name": "Reflex"
-  }
-}
