@@ -1,0 +1,13 @@
+{
+  "name": "reflex",
+  "owner": {
+    "name": "Reflex"
+  },
+  "plugins": [
+    {
+      "name": "reflex",
+      "source": "./",
+      "description": "Skills for the Reflex web framework"
+    }
+  ]
+}
