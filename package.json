@@ -1,0 +1,14 @@
+{
+  "name": "reflex-agent-skills",
+  "version": "0.1.0",
+  "author": "Reflex",
+  "license": "MIT",
+  "description": "Official Reflex agent skills",
+  "scripts": {
+    "test": "vitest run",
+    "test:sanity": "vitest run test/sanity.test.ts"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.0"
+  }
+}

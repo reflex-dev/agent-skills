@@ -1,5 +1,20 @@
 {
-  "owner": "reflex-dev",
-  "repo": "agent-skills",
-  "path": "/"
+  "name": "reflex-agent-skills",
+  "owner": {
+    "name": "Reflex",
+    "email": "support@reflex.dev"
+  },
+  "metadata": {
+    "description": "Official Reflex agent skills for Claude Code",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "reflex-docs",
+      "description": "Reflex framework documentation — components, state, events, styling, database, and more",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/reflex-docs"]
+    }
+  ]
 }
