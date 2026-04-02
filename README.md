@@ -8,8 +8,11 @@ These skills work with any agent that supports the Agent Skills standard, includ
 
 ### Claude Code
 
+Install using the [plugin marketplace](https://code.claude.com/docs/en/discover-plugins#add-from-github):
+
 ```
 /plugin marketplace add reflex-dev/agent-skills
+/plugin install reflex-docs@reflex-agent-skills
 ```
 
 ### Cursor
