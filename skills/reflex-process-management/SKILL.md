@@ -2,7 +2,7 @@
 name: reflex-process-management
 description: >
   Manage Reflex application processes: compile to test, run the server in production mode,
-  reload a running app by finding and restarting the backend process, and manage logs for
+  reload a running app by finding and restarting the app process, and manage logs for
   debugging. Use when the user wants to test, run, restart, or reload a Reflex app,
   when troubleshooting a running Reflex server, or when investigating errors.
 ---
@@ -16,7 +16,7 @@ This skill covers how to compile, run, and reload a Reflex application.
 To verify the app compiles without errors, run:
 
 ```bash
-reflex compile --dry-run
+reflex compile --dry
 ```
 
 This checks for syntax errors, import issues, and component problems without starting the server. Use this as a quick validation step after making changes.
@@ -26,7 +26,7 @@ This checks for syntax errors, import issues, and component problems without sta
 When instructed to run the Reflex server, always use production mode and redirect output to a log file:
 
 ```bash
-reflex run --env prod 2>&1 | tee reflex.log
+reflex run --env prod --single-port 2>&1 | tee reflex.log
 ```
 
 This command starts a long-running server process that **does not support hot reload** in production mode. Code changes will not be picked up automatically — you must stop and restart the server to apply changes (see **Reloading a Running App** below).
@@ -39,11 +39,11 @@ Using `2>&1 | tee reflex.log` captures both stdout and stderr to `reflex.log` wh
 
 To reload the app without manually stopping and restarting from the terminal, follow these steps:
 
-### Step 1: Determine the backend port
+### Step 1: Determine the app port
 
-Read `reflex.log` to find the port the backend is listening on. Look for a line like `Backend running at: http://0.0.0.0:<port>`. Do not assume the port is 8000.
+Read `reflex.log` to find the port the app is listening on. Look for a line like `App running at: http://0.0.0.0:<port>`. Do not assume the port is 8000.
 
-### Step 2: Find the backend process
+### Step 2: Find the app process
 
 Using the port from Step 1, locate the process:
 
@@ -83,7 +83,7 @@ Once the old process has exited, truncate the old log and start the server again
 
 ```bash
 > reflex.log
-reflex run --env prod 2>&1 | tee reflex.log
+reflex run --env prod --single-port 2>&1 | tee reflex.log
 ```
 
 ## Investigating Errors
