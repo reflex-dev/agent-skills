@@ -15,6 +15,13 @@
       "source": "./",
       "strict": false,
       "skills": ["./skills/reflex-docs"]
+    },
+    {
+      "name": "setup-python-env",
+      "description": "Set up a Python virtual environment and install Reflex for new projects",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/setup-python-env"]
     }
   ]
 }
