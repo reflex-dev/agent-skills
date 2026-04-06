@@ -41,9 +41,10 @@ Clone this repo and copy the skill folders into the appropriate directory for yo
 
 Skills are contextual and auto-loaded based on your conversation.
 
-| Skill                                      | Description                                                                                                                 |
-| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
-| [reflex-docs](skills/reflex-docs/SKILL.md) | Framework documentation covering components, state management, events, styling, database, routing, authentication, and more |
+| Skill                                                | Description                                                                                                                 |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| [reflex-docs](skills/reflex-docs/SKILL.md)           | Framework documentation covering components, state management, events, styling, database, routing, authentication, and more |
+| [setup-python-env](skills/setup-python-env/SKILL.md) | Set up a Python virtual environment and install Reflex for new projects                                                     |
 
 ## MCP Servers
 
