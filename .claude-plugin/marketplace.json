@@ -10,18 +10,15 @@
   },
   "plugins": [
     {
-      "name": "reflex-docs",
-      "description": "Reflex framework documentation — components, state, events, styling, database, and more",
+      "name": "reflex",
+      "description": "Skills for the Reflex web framework — docs, environment setup, and process management",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/reflex-docs"]
-    },
-    {
-      "name": "setup-python-env",
-      "description": "Set up a Python virtual environment and install Reflex for new projects",
-      "source": "./",
-      "strict": false,
-      "skills": ["./skills/setup-python-env"]
+      "skills": [
+        "./skills/reflex-docs",
+        "./skills/setup-python-env",
+        "./skills/reflex-process-management"
+      ]
     }
   ]
 }

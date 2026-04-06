@@ -12,7 +12,7 @@ Install using the [plugin marketplace](https://code.claude.com/docs/en/discover-
 
 ```
 /plugin marketplace add reflex-dev/agent-skills
-/plugin install reflex-docs@reflex-agent-skills
+/plugin install reflex@reflex-agent-skills
 ```
 
 ### Cursor
@@ -41,10 +41,11 @@ Clone this repo and copy the skill folders into the appropriate directory for yo
 
 Skills are contextual and auto-loaded based on your conversation.
 
-| Skill                                                | Description                                                                                                                 |
-| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| [reflex-docs](skills/reflex-docs/SKILL.md)           | Framework documentation covering components, state management, events, styling, database, routing, authentication, and more |
-| [setup-python-env](skills/setup-python-env/SKILL.md) | Set up a Python virtual environment and install Reflex for new projects                                                     |
+| Skill                                                                  | Description                                                                                                                 |
+| ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| [reflex-docs](skills/reflex-docs/SKILL.md)                             | Framework documentation covering components, state management, events, styling, database, routing, authentication, and more |
+| [setup-python-env](skills/setup-python-env/SKILL.md)                   | Set up a Python virtual environment and install Reflex for new projects                                                     |
+| [reflex-process-management](skills/reflex-process-management/SKILL.md) | Compile, run, reload, and debug a Reflex application process                                                                |
 
 ## MCP Servers
 
