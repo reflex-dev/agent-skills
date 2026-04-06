@@ -13,3 +13,9 @@ reflex init
 ```
 
 Then proceed with the user's request.
+
+## Managing a Reflex Process
+
+When you need to compile, run, or reload a Reflex application, follow the [reflex-process-management](skills/reflex-process-management/SKILL.md) skill.
+
+Follow the skill for compiling, running, reloading, and investigating errors in a Reflex app.
