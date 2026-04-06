@@ -45,11 +45,13 @@ Read `reflex.log` to find the port the app is listening on. Look for a line like
 
 ### Step 2: Find the app process
 
-Using the port from Step 1, locate the process:
+Using the port from Step 1, locate the **listening** process (not browser connections):
 
 ```bash
-lsof -i :<port> -t
+lsof -i :<port> -sTCP:LISTEN -t
 ```
+
+The `-sTCP:LISTEN` flag is critical — it filters to only the server process that is *listening* on the port, excluding browser or client connections. Without it, you may kill the user's browser.
 
 If `lsof` is not available, use:
 
@@ -68,13 +70,13 @@ fuser <port>/tcp
 Send `SIGINT` (equivalent to Ctrl+C) to gracefully stop the process:
 
 ```bash
-kill -INT $(lsof -i :<port> -t)
+kill -INT $(lsof -i :<port> -sTCP:LISTEN -t)
 ```
 
 If the process doesn't stop, escalate to `SIGTERM`:
 
 ```bash
-kill -TERM $(lsof -i :<port> -t)
+kill -TERM $(lsof -i :<port> -sTCP:LISTEN -t)
 ```
 
 ### Step 4: Restart the server
