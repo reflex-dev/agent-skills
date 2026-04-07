@@ -1,7 +1,7 @@
 import { execSync } from "node:child_process";
 import { existsSync, readdirSync, rmSync } from "node:fs";
 import { join } from "node:path";
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { afterAll, beforeAll, describe, expect, it } from "bun:test";
 
 const ROOT_DIR = join(__dirname, "..");
 const SKILLS_DIR = join(ROOT_DIR, "skills");
@@ -27,7 +27,7 @@ describe("skills add sanity check", () => {
       rmSync(CLAUDE_SKILLS_DIR, { recursive: true, force: true });
     }
     try {
-      commandOutput = execSync("npx skills add . -a claude-code -y", {
+      commandOutput = execSync("bunx skills add . -a claude-code -y", {
         cwd: ROOT_DIR,
         encoding: "utf-8",
         stdio: ["pipe", "pipe", "pipe"],
@@ -43,7 +43,7 @@ describe("skills add sanity check", () => {
       commandOutput = `${execError.stdout || ""}\n${execError.stderr || ""}`;
       commandExitCode = execError.status ?? 1;
     }
-  });
+  }, 120_000);
 
   afterAll(() => {
     if (existsSync(CLAUDE_SKILLS_DIR)) {
@@ -56,8 +56,7 @@ describe("skills add sanity check", () => {
   });
 
   it("should not contain 'Error' in command output", () => {
-    const hasError =
-      /\bError\b/i.test(commandOutput) && !/✓/.test(commandOutput);
+    const hasError = /\bError\b/i.test(commandOutput) && !/✓/.test(commandOutput);
     if (hasError) {
       console.log("Command output:", commandOutput);
     }
@@ -81,10 +80,7 @@ describe("skills add sanity check", () => {
   it("should have SKILL.md in each installed skill", () => {
     for (const skillName of skillNames) {
       const skillMdPath = join(CLAUDE_SKILLS_DIR, skillName, "SKILL.md");
-      expect(
-        existsSync(skillMdPath),
-        `Expected SKILL.md to exist at ${skillMdPath}`,
-      ).toBe(true);
+      expect(existsSync(skillMdPath), `Expected SKILL.md to exist at ${skillMdPath}`).toBe(true);
     }
   });
 });

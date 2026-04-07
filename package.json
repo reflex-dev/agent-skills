@@ -1,14 +1,17 @@
 {
   "name": "reflex-agent-skills",
   "version": "0.1.0",
-  "author": "Reflex",
-  "license": "MIT",
   "description": "Official Reflex agent skills",
+  "license": "MIT",
+  "author": "Reflex",
   "scripts": {
-    "test": "vitest run",
-    "test:sanity": "vitest run test/sanity.test.ts"
+    "test": "bun test",
+    "test:sanity": "bun test test/sanity.test.ts",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check ."
   },
   "devDependencies": {
-    "vitest": "^3.0.0"
+    "@types/bun": "^1.3.11",
+    "oxfmt": "^0.43.0"
   }
 }

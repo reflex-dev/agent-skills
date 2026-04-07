@@ -51,7 +51,7 @@ Using the port from Step 1, locate the **listening** process (not browser connec
 lsof -i :<port> -sTCP:LISTEN -t
 ```
 
-The `-sTCP:LISTEN` flag is critical — it filters to only the server process that is *listening* on the port, excluding browser or client connections. Without it, you may kill the user's browser.
+The `-sTCP:LISTEN` flag is critical — it filters to only the server process that is _listening_ on the port, excluding browser or client connections. Without it, you may kill the user's browser.
 
 If `lsof` is not available, use:
 
