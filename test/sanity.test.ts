@@ -27,7 +27,7 @@ describe("skills add sanity check", () => {
       rmSync(CLAUDE_SKILLS_DIR, { recursive: true, force: true });
     }
     try {
-      commandOutput = execSync("npx skills add . -a claude-code -y", {
+      commandOutput = execSync("bunx skills add . -a claude-code -y", {
         cwd: ROOT_DIR,
         encoding: "utf-8",
         stdio: ["pipe", "pipe", "pipe"],
@@ -43,7 +43,7 @@ describe("skills add sanity check", () => {
       commandOutput = `${execError.stdout || ""}\n${execError.stderr || ""}`;
       commandExitCode = execError.status ?? 1;
     }
-  });
+  }, 120_000);
 
   afterAll(() => {
     if (existsSync(CLAUDE_SKILLS_DIR)) {
