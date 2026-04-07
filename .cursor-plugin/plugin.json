@@ -6,14 +6,5 @@
     "name": "Reflex",
     "url": "https://reflex.dev"
   },
-  "keywords": [
-    "reflex",
-    "python",
-    "web",
-    "full-stack",
-    "components",
-    "state",
-    "react",
-    "tailwind"
-  ]
+  "keywords": ["reflex", "python", "web", "full-stack", "components", "state", "react", "tailwind"]
 }
