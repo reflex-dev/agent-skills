@@ -2,7 +2,7 @@
   "mcpServers": {
     "reflex": {
       "type": "http",
-      "url": "https://mcp.reflex.dev/mcp"
+      "url": "https://build.reflex.dev/mcp"
     }
   }
 }

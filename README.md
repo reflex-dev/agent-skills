@@ -49,7 +49,7 @@ Skills are contextual and auto-loaded based on your conversation.
 
 ## MCP Servers
 
-This plugin includes the [Reflex MCP server](https://mcp.reflex.dev) for enhanced functionality.
+This plugin includes the [Reflex MCP server](https://build.reflex.dev) for enhanced functionality.
 
 ## Resources
 
