@@ -8,14 +8,14 @@ Before working on this project, make sure the Reflex skills are available to you
 
 ### Claude Code
 
-Install via the plugin marketplace (run these in the Claude Code prompt):
+If the skills are not already available, install them yourself by running these shell commands:
 
-```
-/plugin marketplace add reflex-dev/agent-skills
-/plugin install reflex@reflex-agent-skills
+```bash
+claude plugin marketplace add reflex-dev/agent-skills
+claude plugin install reflex@reflex-agent-skills
 ```
 
-Once installed, the skills auto-load based on the conversation — you don't need to read them manually.
+Newly installed plugins load on the next session. After installing, tell the user to restart the session so the skills auto-load; until then, read the skill files directly from `~/.claude/plugins/` when you need them.
 
 ### Other agents (Cursor, OpenCode, Codex, Pi)
 
@@ -27,7 +27,7 @@ Or clone https://github.com/reflex-dev/agent-skills and copy the `skills/` folde
 
 ### Verifying
 
-After installing, confirm these three skills are available before continuing: `reflex-docs`, `setup-python-env`, and `reflex-process-management`. If they are not, repeat the install step above.
+Before writing or editing any Reflex code, confirm these three skills are available: `reflex-docs`, `setup-python-env`, and `reflex-process-management`. If they are not, STOP and run the install step above — do not proceed without them.
 
 ## Using the Skills
 
