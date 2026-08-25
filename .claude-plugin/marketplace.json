@@ -11,13 +11,14 @@
   "plugins": [
     {
       "name": "reflex",
-      "description": "Skills for the Reflex web framework — docs, environment setup, and process management",
+      "description": "Skills for the Reflex web framework — docs, environment setup, process management, and guarded agent workflows",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/reflex-docs",
         "./skills/setup-python-env",
-        "./skills/reflex-process-management"
+        "./skills/reflex-process-management",
+        "./skills/reflex-hol-guard"
       ]
     }
   ]
